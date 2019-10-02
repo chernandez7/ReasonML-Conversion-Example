@@ -18,19 +18,5 @@ export default StyleSheet.create({
     justifyContent: "space-between",
     alignContent: "center",
     alignItems: "center"
-  },
-  button: {
-    width: 80,
-    height: 32,
-    borderWidth: 2,
-    borderRadius: 4,
-    justifyContent: "center",
-    alignContent: "center",
-    alignItems: "center",
-    margin: 8
-  },
-  buttonText: {
-    fontSize: 24,
-    fontWeight: "bold"
   }
 });

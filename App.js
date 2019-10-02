@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, TouchableWithoutFeedback } from "react-native";
 
+import Button from "./src/Button";
 import Style from "./App.style";
 
 class App extends React.Component {
@@ -31,18 +32,5 @@ class App extends React.Component {
     );
   }
 }
-
-const Button = ({ text, onPress }) => (
-  <TouchableWithoutFeedback onPress={onPress}>
-    <View
-      style={[
-        Style.button,
-        text === "+" ? { borderColor: "green" } : { borderColor: "red" }
-      ]}
-    >
-      <Text style={Style.buttonText}>{text}</Text>
-    </View>
-  </TouchableWithoutFeedback>
-);
 
 export default App;
