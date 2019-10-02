@@ -1,3 +1,5 @@
+![Presentation](https://i.imgur.com/eXpnOwS.png)
+
 # Reason Counter Example
 
 Converting a basic React Native app to ReasonML using Bucklescript, Reason React, and Hooks!
