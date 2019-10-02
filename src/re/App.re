@@ -28,7 +28,7 @@ let styles =
 [@react.component]
 let app = () => {
    let (count, setCount) = React.useState(() => 0);
-
+   
     <View
       style={styles##container}>
       <Text

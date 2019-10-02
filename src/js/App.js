@@ -1,8 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-// import Button from "./Button";
-import Button from "./re/MyButton.bs";
+import Button from "./Button";
 import Style from "./App.style";
 
 class App extends React.Component {
