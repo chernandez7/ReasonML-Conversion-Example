@@ -1,14 +1,38 @@
 {
+  "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "watch": "bsb -make-world -clean-world -w",
+    "test": "jest",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject"
   },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-expo": "^7.0.0",
+    "bs-platform": "^5.0.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1",
+    "husky": "^2.4.1",
+    "jest-expo": "^35.0.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.13.5"
+  },
   "dependencies": {
+    "@glennsl/bs-jest": "^0.4.9",
     "expo": "^35.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
@@ -17,9 +41,15 @@
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.60.0"
   },
-  "devDependencies": {
-    "babel-preset-expo": "^7.0.0",
-    "bs-platform": "^5.0.6"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "private": true
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }

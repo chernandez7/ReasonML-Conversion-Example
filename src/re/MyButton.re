@@ -15,29 +15,20 @@ let styles =
           ~margin=8.->dp,
           (),
         ),
-        "incContainer":
-        style(
-          ~borderColor= "green",
-          (),
-        ),
-        "decContainer":
-        style(
-          ~borderColor= "red",
-          ()
-        ),
-      "text":
-        style(~fontSize=24., ~fontWeight=`bold, ()),
+      "incContainer": style(~borderColor="green", ()),
+      "decContainer": style(~borderColor="red", ()),
+      "text": style(~fontSize=24., ~fontWeight=`bold, ()),
     })
   );
 
 [@react.component]
 let make = (~text="", ~onPress) => {
-    <TouchableOpacity
-      style={Style.arrayOption([|Some(styles##container),Some((text === "+") ? styles##incContainer : styles##decContainer)|])} onPress>
-      <Text
-        style=styles##text
-      >text->ReasonReact.string</Text>
-    </TouchableOpacity>
+  <TouchableOpacity
+    style={Style.arrayOption([|
+      Some(styles##container),
+      Some(text === "+" ? styles##incContainer : styles##decContainer),
+    |])}
+    onPress>
+    <Text style=styles##text> text->ReasonReact.string </Text>
+  </TouchableOpacity>;
 };
-
-
