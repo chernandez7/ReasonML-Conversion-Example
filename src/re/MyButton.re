@@ -1,7 +1,5 @@
 open ReactNative;
 
-let component = ReasonReact.statelessComponent("Button");
-
 let styles =
   Style.(
     StyleSheet.create({
@@ -32,18 +30,14 @@ let styles =
     })
   );
 
-let make = (~text, ~onPress, _children) => {
-  ...component,
-  render: _self =>
+[@react.component]
+let make = (~text="", ~onPress) => {
     <TouchableOpacity
-      style={Style.arrayOption([|Some(styles##container),Some((text === "+"->ReasonReact.string) ? styles##incContainer : styles##decContainer)|])} onPress>
+      style={Style.arrayOption([|Some(styles##container),Some((text === "+") ? styles##incContainer : styles##decContainer)|])} onPress>
       <Text
         style=styles##text
-      >text</Text>
+      >text->ReasonReact.string</Text>
     </TouchableOpacity>
 };
 
-let default =
-  ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~text=jsProps##text, ~onPress=jsProps##onPress, [||])
-  );
+

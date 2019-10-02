@@ -1,7 +1,3 @@
-import React from "react";
+// import App from "./src/App";
 
-import App from "./src/App";
-
-const AppContainer = () => <App />;
-
-export default AppContainer;
+export { app as default } from "./src/re/App.bs.js";
