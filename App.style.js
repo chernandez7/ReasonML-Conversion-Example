@@ -9,7 +9,7 @@ export default StyleSheet.create({
     alignItems: "center"
   },
   count: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: "bold",
     margin: 8
   },
@@ -20,8 +20,8 @@ export default StyleSheet.create({
     alignItems: "center"
   },
   button: {
-    width: 40,
-    height: 20,
+    width: 80,
+    height: 32,
     borderWidth: 2,
     borderRadius: 4,
     justifyContent: "center",
@@ -30,7 +30,7 @@ export default StyleSheet.create({
     margin: 8
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: "bold"
   }
 });
