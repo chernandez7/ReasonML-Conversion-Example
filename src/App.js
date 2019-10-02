@@ -1,7 +1,8 @@
 import React from "react";
 import { Text, View, TouchableWithoutFeedback } from "react-native";
 
-import Button from "./Button";
+// import Button from "./Button";
+import Button from "./re/Button.bs";
 import Style from "./App.style";
 
 class App extends React.Component {
