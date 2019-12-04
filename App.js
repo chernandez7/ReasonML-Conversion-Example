@@ -1,10 +1,20 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 
 import JSButton from "./src/js/Button";
 import JSApp from "./src/js/App";
 import ReasonApp from "./src/re/App.bs";
 import ReasonButton from "./src/re/MyButton.bs";
+
+const Style = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  appContainer: {
+    flex: 1,
+    alignItems: "center"
+  }
+});
 
 class App extends React.Component {
   state = {
@@ -14,23 +24,23 @@ class App extends React.Component {
   render() {
     const { isReason } = this.state;
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={Style.container}>
         {isReason ? (
-          <React.Fragment>
+          <View style={Style.appContainer}>
             <ReasonApp />
             <ReasonButton
               text="Switch"
               onPress={() => this.setState({ isReason: !isReason })}
             />
-          </React.Fragment>
+          </View>
         ) : (
-          <React.Fragment>
+          <View style={Style.appContainer}>
             <JSApp />
             <JSButton
               text="Switch"
               onPress={() => this.setState({ isReason: !isReason })}
             />
-          </React.Fragment>
+          </View>
         )}
       </SafeAreaView>
     );
