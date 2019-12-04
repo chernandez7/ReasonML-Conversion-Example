@@ -25,7 +25,7 @@ let styles =
   );
 
 [@react.component]
-let app = () => {
+let make = () => {
   let (count, setCount) = React.useState(() => 0);
   <View
     style={
@@ -43,3 +43,5 @@ let app = () => {
     </Text>
   </View>;
 };
+
+let default = make;

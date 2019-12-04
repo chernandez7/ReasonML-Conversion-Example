@@ -1,5 +1,4 @@
 open ReactNative;
-open Expo;
 
 let styles =
   Style.(
@@ -31,10 +30,8 @@ let make = (~text="", ~onPress) => {
       Some(isPlus ? styles##incContainer : styles##decContainer),
     |])}
     onPress>
-    <VectorIcons.FontAwesome
-      name={isPlus ? "plus" : "minus"}
-      size=20
-      color="black"
-    />
+    <Text style=styles##text> text->ReasonReact.string </Text>
   </TouchableOpacity>;
 };
+
+let default = make;
