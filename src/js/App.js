@@ -4,33 +4,19 @@ import { Text, View } from "react-native";
 import Button from "./Button";
 import Style from "./App.style";
 
-class App extends React.Component {
-  state = {
-    count: 0
-  };
+function App() {
+  const [count, setCount] = React.useState(() => 0);
 
-  increment = () => {
-    const { count } = this.state;
-    this.setState({ count: count + 1 });
-  };
-
-  decrement = () => {
-    const { count } = this.state;
-    this.setState({ count: count - 1 });
-  };
-
-  render() {
-    const { count } = this.state;
-    return (
-      <View style={Style.container}>
-        <Text style={Style.count}>{count}</Text>
-        <View style={Style.buttonsContainer}>
-          <Button text="-" onPress={() => this.decrement()} />
-          <Button text="+" onPress={() => this.increment()} />
-        </View>
+  return (
+    <View style={Style.container}>
+      <Text style={Style.count}>{count}</Text>
+      <View style={Style.buttonsContainer}>
+        <Button text="-" onPress={() => setCount(count - 1)} />
+        <Button text="+" onPress={() => setCount(count + 1)} />
       </View>
-    );
-  }
+      <Text style={Style.count}>Currently running JS.</Text>
+    </View>
+  );
 }
 
 export default App;

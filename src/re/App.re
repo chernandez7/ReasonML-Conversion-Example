@@ -38,5 +38,8 @@ let app = () => {
       <MyButton text="-" onPress={_ => setCount(_ => count - 1)} />
       <MyButton text="+" onPress={_ => setCount(_ => count + 1)} />
     </View>
+    <Text style=styles##count>
+      {ReasonReact.string("Currently running ReasonML.")}
+    </Text>
   </View>;
 };
