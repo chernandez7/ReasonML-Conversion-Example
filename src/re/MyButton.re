@@ -1,4 +1,5 @@
 open ReactNative;
+open Expo;
 
 let styles =
   Style.(
@@ -23,12 +24,17 @@ let styles =
 
 [@react.component]
 let make = (~text="", ~onPress) => {
+  let isPlus = text === "+";
   <TouchableOpacity
     style={Style.arrayOption([|
       Some(styles##container),
-      Some(text === "+" ? styles##incContainer : styles##decContainer),
+      Some(isPlus ? styles##incContainer : styles##decContainer),
     |])}
     onPress>
-    <Text style=styles##text> text->ReasonReact.string </Text>
+    <VectorIcons.FontAwesome
+      name={isPlus ? "plus" : "minus"}
+      size=20
+      color="black"
+    />
   </TouchableOpacity>;
 };

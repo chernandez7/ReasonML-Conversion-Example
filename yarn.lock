@@ -6664,6 +6664,11 @@ realpath-native@^1.1.0:
   dependencies:
     util.promisify "^1.0.0"
 
+reason-expo@^34.4.0:
+  version "34.4.0"
+  resolved "https://registry.yarnpkg.com/reason-expo/-/reason-expo-34.4.0.tgz#818e40b748f5e358809944b96ea927689b535469"
+  integrity sha512-EBTek4Ya/xcZdj4BJZY7/OYYc4ufhJI8nX5J2ZkhOD+PZeo5174xM3d+uh/fO7CaypK46dGBgxLaMFdvTB/WHQ==
+
 reason-react-native@^0.60.0:
   version "0.60.0"
   resolved "https://registry.yarnpkg.com/reason-react-native/-/reason-react-native-0.60.0.tgz#7adb9837f28d79d9f1e009b5d01ae864aff15d51"

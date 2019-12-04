@@ -19,5 +19,10 @@
       "type": "dev"
     }
   ],
-  "bs-dependencies": ["reason-react", "reason-react-native", "@glennsl/bs-jest"]
+  "bs-dependencies": [
+    "reason-react",
+    "reason-react-native",
+    "@glennsl/bs-jest",
+    "reason-expo"
+  ]
 }
