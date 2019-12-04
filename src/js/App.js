@@ -4,9 +4,8 @@ import { Text, View } from "react-native";
 import Button from "./Button";
 import Style from "./App.style";
 
-function App(props) {
+function App() {
   const [count, setCount] = React.useState(() => 0);
-  console.log(props);
 
   return (
     <View style={Style.container}>
