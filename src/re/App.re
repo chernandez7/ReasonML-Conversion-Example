@@ -29,6 +29,7 @@ let make = () => {
   let (count, setCount) = React.useState(() => 0);
 
   <View
+    testID="ReasonApp"
     style={
       styles##container;
     }>

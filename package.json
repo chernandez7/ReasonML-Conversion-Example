@@ -7,8 +7,7 @@
     "test": "jest",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "web": "expo start --web"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -29,16 +28,16 @@
     "husky": "^2.4.1",
     "jest-expo": "^35.0.0",
     "lint-staged": "^8.2.1",
-    "prettier": "^1.13.5"
+    "prettier": "^1.13.5",
+    "react-native-testing-library": "^1.11.1",
+    "react-test-renderer": "^16.12.0"
   },
   "dependencies": {
-    "@glennsl/bs-jest": "^0.4.9",
     "expo": "^35.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-web": "^0.11.7",
-    "reason-expo": "^34.4.0",
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.60.0"
   },
