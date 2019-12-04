@@ -12,24 +12,6 @@ Used in tandem with [this talk](https://docs.google.com/presentation/d/1va2zii77
 - `yarn watch`
 - `yarn start`
 
-## To run the ReasonML version:
-
-```javascript
-// import App from "./src/js/App";
-// export default App;
-
-export { app as default } from "./src/re/App.bs.js";
-```
-
-## To run the Javascript version
-
-```javascript
-import App from "./src/js/App";
-export default App;
-
-// export { app as default } from "./src/re/App.bs.js";
-```
-
 ## Example
 
 ![Image of app](https://i.imgur.com/vSnRuTL.png)
